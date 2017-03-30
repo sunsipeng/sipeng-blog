@@ -2,9 +2,9 @@
  * Created by Administrator on 2017/3/11.
  */
 module.exports = {
-    host     : 'localhost',
-    user     : 'root',
-    password : 'sipeng',
+    host     : 'bfyyg4hrf-mysql.services.clever-cloud.com',
+    user     : 'unnzoovmsyuprerd',
+    password : '8uMqoWmZwvX9jwPl7sh',
     port: '3306',
-    database: 'sp-server'
+    database: 'bfyyg4hrf'
 };
