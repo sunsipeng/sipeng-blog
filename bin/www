@@ -5,14 +5,27 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('sipeng-blog:server');
+var debug = require('debug')('sipeng-server:server');
 var http = require('http');
+var config = require('../config');
+
+/**
+ * make a log directory, just in case it isn't there.
+ */
+try {
+  require('fs').mkdirSync('./logs');
+} catch (e) {
+  if (e.code != 'EEXIST') {
+    logger.error("Could not set up log directory, error was: ", e);
+    process.exit(1);
+  }
+}
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(config.port);
 app.set('port', port);
 
 /**
@@ -82,6 +95,7 @@ function onError(error) {
  */
 
 function onListening() {
+  console.log('Express server listening on port ', server.address().port, " with pid ", process.pid );
   var addr = server.address();
   var bind = typeof addr === 'string'
     ? 'pipe ' + addr
