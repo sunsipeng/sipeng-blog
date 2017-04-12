@@ -19823,3 +19823,4 @@
 [2017-03-30 13:51:05.925] [INFO] http - ::1 - - "GET /libs/css/login.css HTTP/1.1" 200 2631 "http://localhost:8080/admin"
 [2017-03-30 13:51:05.938] [INFO] http - ::1 - - "GET /libs/css/bootstrap.min.css HTTP/1.1" 200 122540 "http://localhost:8080/admin"
 [2017-03-30 13:51:05.964] [INFO] http - ::1 - - "GET /images/icon.png HTTP/1.1" 200 157884 "http://localhost:8080/admin"
+[2017-03-30 14:10:02.863] [INFO] database - connect databases success for mysql...11
