@@ -58,7 +58,7 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
-//    logger.info(app.get('env') + '==' + err.status);
+    logger.info(app.get('env') + '==' + err.status);
     logger.info("Something went wrong:....", err);
     res.status(err.status || 500);
     res.render('error', {
