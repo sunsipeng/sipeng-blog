@@ -49,3 +49,7 @@ exports.addChannel = function (req,res,next) {
 exports.showAddChannel = function (req,res,next) {
     res.render('addChannel')
 };
+
+exports.serviceWorker = function (req,res,next) {
+    res.render('worker');
+};

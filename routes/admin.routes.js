@@ -23,4 +23,6 @@ router.post('/signup', users.signup);
 router.get('/addChannel',auth.userRequired,home.showAddChannel);
 router.post('/addChannel',auth.userRequiredAjax,home.addChannel);
 
+router.get('/worker',home.serviceWorker);
+
 module.exports = router;
