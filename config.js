@@ -12,7 +12,8 @@ var config = {
     },
     port: 8080,
     auth_cookie_name: 'sipeng-server-cookie',
-    session_secret:'sipeng-server_secret'
+    session_secret:'sipeng-server_secret',
+    scr:''
 };
 
 module.exports = config;
