@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>员工评估系统-登录</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="/libs/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/libs/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/libs/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/libs/css/style-metro.css" rel="stylesheet" type="text/css"/>
+    <link href="/libs/css/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/libs/css/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="/libs/css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="/libs/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link href="/libs/css/login.css" rel="stylesheet" type="text/css"/>
+    <!-- END PAGE LEVEL STYLES -->
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<body class="login">
+<!-- BEGIN LOGO -->
+<div class="logo">
+    <img src="/images/logo.png" alt="" class="logo-img"/>
+</div>
+<!-- END LOGO -->
+<!-- BEGIN LOGIN -->
+<div class="content">
+    <!-- BEGIN LOGIN FORM -->
+    <form class="form-vertical login-form" method="post" action="/signin">
+        <h3 class="form-title">登录</h3>
+        <% if (typeof(error) !== 'undefined') { %>
+            <div class="alert alert-error show">
+                <span class="close"></span>
+                <span>
+                    <%= error %>
+                </span>
+            </div>
+        <%  } %>
+        <div class="control-group">
+            <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+            <label class="control-label visible-ie8 visible-ie9">Username</label>
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-user"></i>
+                    <input class="m-wrap placeholder-no-fix" type="text" placeholder="请填写用户名" name="uname" />
+                </div>
+                <!--<label for="username" class="help-inline help-small no-left-padding">用户名不能为空</label>-->
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label visible-ie8 visible-ie9">Password</label>
+            <div class="controls">
+                <div class="input-icon left">
+                    <i class="icon-lock"></i>
+                    <input class="m-wrap placeholder-no-fix" type="password" placeholder="请填写密码" name="passwd"/>
+                </div>
+                <!--<label for="password" class="help-inline help-small no-left-padding">密码不能为空</label>-->
+            </div>
+        </div>
+        <div class="form-actions">
+            <label class="checkbox">
+                <div class="checker">
+                    <span>
+                        <input type="checkbox" name="remember" value="true" />
+                    </span>
+                </div> 记住密码
+            </label>
+            <button type="submit" class="btn green pull-right">
+                <input type="submit" value="登录" id="login-button"/> <i class="m-icon-swapright m-icon-white"></i>
+            </button>
+        </div>
+        <div class="forget-password">
+            <a href="javascript:void(0)">
+                <h4 class="update_passwd">修改密码</h4>
+            </a>
+        </div>
+    </form>
+    <!-- END LOGIN FORM -->
+</div>
+
+<script type="text/javascript">
+    //background-position: -75px -261px;
+</script>
+<!-- END LOGIN -->
+<!-- BEGIN COPYRIGHT -->
+<div class="copyright">
+    2017 &copy; ZhiYi Technology.
+</div>
+<!-- END COPYRIGHT -->
+<!-- END BODY -->
+</html>

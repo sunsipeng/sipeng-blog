@@ -1,0 +1,77 @@
+<%- include('header', {title: '首页',home:true,admin:false})  %>
+
+<link href="/libs/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="/libs/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css"/>
+<link href="/stylesheets/add_work_styles.css" rel="stylesheet" type="text/css"/>
+
+<!--main content-->
+<div class="main-container">
+    <p class="view-app-nav"><a href="/index">首页</a>/<span>新增</span></p>
+    <% if (typeof(error) !== 'undefined') { %>
+    <div class="alert alert-error show">
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+    </div>
+    <%  } %>
+
+    <form action="/editWorkRecord" method="post" class="form-container" id="addWorkForm">
+        <div class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputName2" >开始时间：</label>
+                <input type="text" class="form-control"  id="startDate"
+                       name="startTime"
+                       value="<%- editData.start_worktime %>" disabled/>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail2">结束时间：</label>
+                <input type="text" class="form-control"  id="endDate"
+                       name="endTime"
+                       value="<%- editData.end_worktime %>" disabled/>
+            </div>
+        </div>
+        <div class="form-group content-spacing">
+            <label for="exampleInputName2">工作计划：</label>
+            <textarea class="form-control" rows="6" placeholder="在此输入工作内容..."
+                      name="planContent"><%- editData.work_content.split(split)[0] %>
+            </textarea>
+            <hr />
+            <label for="exampleInputName2">工作总结：</label>
+            <textarea class="form-control" rows="6" placeholder="在此输入工作内容..."
+                      name="completedContent"><%- editData.work_content.split(split)[1] %></textarea>
+        </div>
+        <div class="form-inline content-spacing">
+            <div class="form-group">
+                <label for="exampleInputName2" >评分：</label>
+                <input type="text" class="form-control" name="score"  value="<%- editData.self_score %>"/>
+                <span class="prompt">0~10分范围内</span>
+            </div>
+
+            <input type="text" name="uname" id="usernamefiled" value="<%- editData.uname %>" readonly style="display: none;"/>
+            <input type="text" name="workId" id="workIdfiled" value="<%- editData.workId %>" readonly style="display: none;"/>
+        </div>
+
+        <div class="form-group content-spacing float-right">
+            <button type="button" class="btn btn-success" id="addWorkButton">
+                <input type="submit" value="提交工作总结" id="addWorkBtn"/></i>
+            </button>
+        </div>
+    </form>
+</div>
+<!--/main content-->
+<script type="text/javascript" src="/libs/js/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" >
+
+    //提交FORM
+    var dom = function (id) {
+        return   document.getElementById(id);
+    };
+    var submitBtn  = dom('addWorkButton'),
+        addWorkForm  = dom('addWorkForm');
+    submitBtn.onclick = function () {
+        console.log('click me .');
+        addWorkForm.submit();
+    };
+</script>
+
+<% include  footer.ejs %>

@@ -1,0 +1,18 @@
+.work-lists .base-info{width:100%;height:69px;border-bottom:1px solid #e0dcdc;margin-bottom: 6px;}
+.work-lists .user-icon{border-radius:50%;width:66px;float: left;}
+.work-lists .left-info{float: left;  margin-top:13px;margin-left:5px}
+.work-lists .left-info p{margin:0 0 5px;}
+.work-lists .left-info p i{}
+.work-lists .right-info{margin-top:13px;margin-right:5px;float:right;}
+.work-content-info{width:100%;height:auto;}
+.work-content-info p{margin:0;}
+.work-lists  .operation-content{width: 100%; height: auto; position: relative; margin-top: 10px;text-align: center;}
+.edit-work-content{font-size:14px;float: left;}
+.edit-work-content:hover{text-decoration: none;}
+.work-lists .score-operation{ height:auto; position: absolute;right:0px;top:0; }
+.work-lists  .opera-work-content{font-size:18px;}
+.work-lists  .opera-work-content i{cursor:pointer;}
+.work-lists  .opera-work-content:first-child{margin-right:25px;}
+.active-state{position: absolute; left: -24px; top: 33px;}
+.overtime img{width:25px;}
+.disableActived{  color: grey;}

@@ -1,0 +1,81 @@
+<%- include('header', {title: '汇总',summary:true})  %>
+
+<link rel="stylesheet" href="stylesheets/home_style.css" />
+<style>#main{margin:0 auto;width: 960px;height:500px;}.times{text-align: center; font-size: 20px; font-weight: bold;}</style>
+
+<div class="main-container">
+    <p class="times">
+        <%- result.result.startTime %>
+        <% if (result.result.startTime == 'unknow') { %>
+            系统中暂无工作记录
+        <% } else { %>
+            人员工作时间汇总
+        <% } %>
+    </p>
+    <div id="main"></div>
+</div>
+<script src="/libs/js/echarts.min.js"></script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+
+    var option = {
+        title : {
+            text: ''
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['时间*工作效率','工作时间']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                data : ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月']
+            }
+        ],
+        yAxis : [
+            {gridIndex: 0, min: 0, max: 24}
+        ],
+        series : [
+            {
+                name:'时间*工作效率',
+                type:'bar',
+                data:[],
+                markPoint : {
+                    data : [
+
+                    ]
+                },
+
+            },
+            {
+                name:'工作时间',
+                type:'bar',
+                data:[],
+                markPoint : {
+                    data : [
+
+                    ]
+                }
+            }
+        ]
+    };
+
+    option.xAxis[0].data = <%-JSON.stringify(result.result.userName)%>;
+    option.series[0].data = <%-JSON.stringify(result.result.workTime)%>;
+    option.series[1].data = <%-JSON.stringify(result.result.workTimeTotal)%>;
+    myChart.setOption(option);
+</script>
+
+<% include  footer.ejs %>

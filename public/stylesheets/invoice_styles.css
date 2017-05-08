@@ -1,0 +1,45 @@
+.main-container{width: 960px;margin: 30px auto;height: auto;}
+.tools-bar{width:100%;height:50px;position: relative;}
+.add-work{position: absolute; top:0;right:0}
+#timeSelection {width: 15%;}
+.main-container .view-app-nav {margin-bottom: 10px;  font-size: 16px;}
+.main-container .content-spacing{margin-top:28px;}
+.main-container .prompt{color:#b9b9b9;}
+.main-container .Invoice{margin-left:30px;}
+.main-container .float-right{text-align: right;}
+
+#addWorkBtn{background: none;  border: 0;}
+.form-container{margin-top: 20px;}
+
+
+/*start list styles*/
+ul li {list-style: none;}
+.work-lists{width:100%;  height:auto;}
+.work-lists .lists-ul{margin:0;}
+.work-lists .lists-ul .lists-li{width:100%;height:auto;margin-top:10px;background: #ffffff; box-shadow: 0px 2px 7px #e9e5e5; border-radius: 5px;
+    box-sizing: border-box; padding: 10px 13px 8px 13px;}
+.work-lists .base-info{width:100%;height:69px;border-bottom:1px solid #e0dcdc;margin-bottom: 6px;}
+.work-lists .user-icon{border-radius:50%;width:55px;float: left;}
+.work-lists .left-info{float: left;  margin-top:13px;margin-left:5px}
+.work-lists .left-info p{margin:0 0 5px;}
+.work-lists .left-info p i{}
+.work-lists .right-info{margin-top:13px;margin-right:5px;float:right;text-align: right;}
+.work-content-info{width:100%;height:auto;}
+.work-content-info p{margin:0;}
+.work-lists  .operation-content{width: 100%; height: auto; position: relative; margin-top: 10px;text-align: center;}
+.edit-work-content{font-size:14px;float: left;}
+.edit-work-content:hover{text-decoration: none;}
+.work-lists .score-operation{ height:auto; position: absolute;right:0px;top:0; }
+.work-lists  .opera-work-content{font-size:18px;}
+.work-lists  .opera-work-content i{cursor:pointer;}
+.work-lists  .opera-work-content:first-child{margin-right:25px;}
+.active-state{position: absolute; left: -24px; top: 33px;}
+.overtime img{width:25px;}
+#timeSelection{width:15%}
+.un-active{color: red}
+.actived{color: green;}
+#unSureBtn{position: absolute; top: 0; left: 0;}
+#allInvoiceBtn{position: absolute; top: 0; left: 256px;}
+#myInvoiceBtn{position: absolute; top: 0; left: 121px;}
+.pagination-container{text-align: center;}
+/*end list styles*/
