@@ -69,9 +69,9 @@ module.exports = {
     "resouce": {
         "name": "跑得快",
         "descr": "跑得快",
-        "logo": "http://192.168.1.216/replay_themes/images/58aa4e84adae0.png",
-        "codeimg": "http://192.168.1.216/replay_themes/images/58aa4e84ad47d.png",
-        "img": "http://192.168.1.216/replay_themes/images/58b525e72adfb.png"
+        "logo": "http://sp.cleverapps.io/mahjong/logo.png",
+        "codeimg": "http://sp.cleverapps.io/mahjong/qrImg.png",
+        "img": "http://sp.cleverapps.io/mahjong/backImg.png"
     },
     "referer": "",
     "state": "fail"
