@@ -1,5 +1,5 @@
 {
-  "requestIp": "http://sp.cleverapps.io:3000/getReplayData",
+  "requestIp": "http://sp.cleverapps.io/getReplayData",
   "showFPS": true,
   "noCache": false,
   "frameRate": 60,
