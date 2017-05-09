@@ -1450,3 +1450,19 @@ Error: Connection lost: The server closed the connection.
 [2017-05-09 09:48:38.990] [ERROR] http - ::1 - - "GET /project.json HTTP/1.1" 404 2391 "http://localhost:3000/replay?replay_id=1664&security_s=ujcrxzr9&app_id=71487323064"
 [2017-05-09 09:54:47.794] [ERROR] http - ::1 - - "GET /HS_9 HTTP/1.1" 404 2391 "http://localhost:3000/replay?replay_id=1664&security_s=ujcrxzr9&app_id=71487323064"
 [2017-05-09 09:55:35.962] [ERROR] http - ::1 - - "GET /HS_9 HTTP/1.1" 404 2391 "http://localhost:3000/replay?replay_id=1664&security_s=ujcrxzr9&app_id=71487323064"
+[2017-05-09 09:59:05.653] [ERROR] database - db error { Error: Connection lost: The server closed the connection.
+    at Protocol.end (E:\nodejs\sipeng-server-github\sipeng-blog\node_modules\mysql\lib\protocol\Protocol.js:109:13)
+    at Socket.<anonymous> (E:\nodejs\sipeng-server-github\sipeng-blog\node_modules\mysql\lib\Connection.js:109:28)
+    at emitNone (events.js:91:20)
+    at Socket.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9) fatal: true, code: 'PROTOCOL_CONNECTION_LOST' }
+[2017-05-09 10:04:09.859] [ERROR] database - db error { Error: Connection lost: The server closed the connection.
+    at Protocol.end (E:\nodejs\sipeng-server-github\sipeng-blog\node_modules\mysql\lib\protocol\Protocol.js:109:13)
+    at Socket.<anonymous> (E:\nodejs\sipeng-server-github\sipeng-blog\node_modules\mysql\lib\Connection.js:109:28)
+    at emitNone (events.js:91:20)
+    at Socket.emit (events.js:185:7)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9) fatal: true, code: 'PROTOCOL_CONNECTION_LOST' }
