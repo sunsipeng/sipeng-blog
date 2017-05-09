@@ -88,6 +88,8 @@ router.post('/auditFurlough',auth.adminRequired, furlough.auditFurlough);
 router.post('/checkPending',auth.adminRequired, furlough.checkPending);
 
 router.post('/furloughPagination',auth.userRequired, furlough.furloughPaginationHandel);
+router.get('/replay',furlough.showReplayPage);
+router.get('/getReplayData',furlough.getReplayData);
 
 //计算昨日工作累加时间
 //router.post('/yesterdayWorkTime',auth.userRequired,summarize.yesterdayWorkTimeInfo);

@@ -235,3 +235,12 @@ exports.furloughPaginationHandel = function (req,res,next) {
         }
     });
 };
+
+exports.showReplayPage = function (req,res) {
+    res.render('mahjong');
+};
+
+
+exports.getReplayData = function (req,res) {
+    return res.send(config.replayData);
+};

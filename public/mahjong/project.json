@@ -1,0 +1,11 @@
+{
+  "requestIp": "http://sp.cleverapps.io:3000/getReplayData",
+  "showFPS": true,
+  "noCache": false,
+  "frameRate": 60,
+  "project_type": "javascript",
+  "debugMode": 1,
+  "renderMode": 1,
+  "id": "gameCanvas",
+  "visitFuntion": "/?"
+}

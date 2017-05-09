@@ -3,6 +3,7 @@
  * 项目配置文件
  */
 var mysqlConfig = require('./common/mysql-config');
+var gameData = require('./common/replayData');
 
 var config = {
     mysql: {
@@ -22,7 +23,8 @@ var config = {
     sysAutoWorkSummary: '系统自动完结该工作记录.',//系统自动结束工作总结 WorkContent
     port: 3000,
     workContentSplit: "[--{[ - ]}--]",// "工作计划" / "工作总结" 分隔符
-    FurloughTypes: ['事假','病假','年假','调休','婚假','产假','陪产假','路途假','其他']
+    FurloughTypes: ['事假','病假','年假','调休','婚假','产假','陪产假','路途假','其他'],
+    replayData: gameData
 };
 
 module.exports = config;
