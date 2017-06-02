@@ -3,5 +3,6 @@
  */
 
 var test = require('../controllers/invoices');
+console.log('test');
 
 test.testConnect();
