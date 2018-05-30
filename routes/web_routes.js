@@ -108,7 +108,7 @@ router.get("/", function (req,res) {
     var url = req.query.u;
     res.header("Content-Type", "text/html; charset=utf-8");
     superagent.get(url)
-        .charset('utf-8')
+        .charset('gb2312')
         .end(function (err, sres) {
             var items = [];
             var hrefs = [];
