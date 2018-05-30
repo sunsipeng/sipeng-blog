@@ -105,7 +105,29 @@ router.get('/api/app-startup',function(req,res,next){
 });
 
 router.get("/", function (req,res) {
-    res.render("home");
+    var url = req.query.u;
+    res.header("Content-Type", "text/html; charset=utf-8");
+    superagent.get(url)
+        .charset('gb2312')
+        .end(function (err, sres) {
+            var items = [];
+            var hrefs = [];
+            if (err) {
+                console.log('ERR: ' + err);
+                res.json({code: failCode, msg: err, sets:items});
+                return;
+            }
+            var $ = cheerio.load(sres.text);
+            $('body a').each(function(idx, element){
+                var href = $(element).attr('href');
+                var target = $(element).attr('target');
+                if(target){
+                  $(element).removeAttr('target');
+                }
+                $(element).attr('href', `/website/${href}`);
+            });
+            res.send(sres.text);
+        });
 });
 
 router.get("/getspalist", function (req,res) {
